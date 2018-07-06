@@ -1,3 +1,4 @@
+// Package db
 // Very simple database package based on [reform](https://github.com/go-reform/reform).
 package db
 
@@ -6,6 +7,7 @@ import (
 	"io/ioutil"
 	"strings"
 
+	// mysql driver import
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/pkg/errors"
 	"gopkg.in/reform.v1"
