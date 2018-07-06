@@ -1,9 +1,14 @@
+[![Build Status](https://travis-ci.com/compo-io/db.svg?branch=master)](https://travis-ci.com/compo-io/db)
+[![codecov](https://codecov.io/gh/compo-io/db/branch/master/graph/badge.svg)](https://codecov.io/gh/compo-io/db)
+[![Go Report Card](https://goreportcard.com/badge/github.com/compo-io/db)](https://goreportcard.com/report/github.com/compo-io/db)
+
 # db
+
+Very simple database package based on [reform](https://github.com/go-reform/reform).
+
 ```
 import "github.com/compo-io/db"
 ```
-
-Very simple database package based on [reform](https://github.com/go-reform/reform).
 
 ## Usage
 
