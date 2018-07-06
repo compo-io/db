@@ -1,5 +1,5 @@
-// Package db
-// Very simple database package based on [reform](https://github.com/go-reform/reform).
+// Package db is a very simple database package
+// based on [reform](https://github.com/go-reform/reform).
 package db
 
 import (
