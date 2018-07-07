@@ -9,6 +9,8 @@ import (
 	_ "github.com/proullon/ramsql/driver"
 	"github.com/stretchr/testify/suite"
 	"gopkg.in/reform.v1"
+	"database/sql"
+	"github.com/pkg/errors"
 )
 
 func TestDB(t *testing.T) {
@@ -53,4 +55,11 @@ func (t *DBTestSuite) TestGetDsn() {
 func (t *DBTestSuite) TestFormDsn() {
 	t.Equal("dsn?"+dsnParams, formDsn("dsn"))
 	t.Equal("dsn?a=b&"+dsnParams, formDsn("dsn?a=b"))
+}
+
+func (t *DBTestSuite) TestIsErrNoRows() {
+	t.True(IsErrNoRows(ErrNoRows))
+	t.True(IsErrNoRows(reform.ErrNoRows))
+	t.True(IsErrNoRows(sql.ErrNoRows))
+	t.False(IsErrNoRows(errors.New("other error")))
 }

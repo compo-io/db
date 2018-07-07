@@ -70,6 +70,11 @@ func Init(dsn *string, driver *string) error {
 	return nil
 }
 
+// IsErrNoRows returns true if err == ErrNoRows
+func IsErrNoRows(err error) bool {
+	return err == ErrNoRows
+}
+
 func getDsn(file ...string) string {
 	secretFile := secret
 	if len(file) == 1 {
